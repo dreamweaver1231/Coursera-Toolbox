@@ -1,16 +1,15 @@
-var readline = require("readline")
+const readline = require('readline');
 
-process.stdin.setEncoding("utf8")
-var rl = readline.createInterface({
+process.stdin.setEncoding('utf8');
+const rl = readline.createInterface({
   input: process.stdin,
   terminal: false,
-})
-
-rl.on("line", readLine)
+});
 
 function readLine(line) {
-  console.log(parseInt(line.toString()))
-  if (line !== "\n") {
-    console.log(line.toString())
+  if (line !== '\n') {
+    console.log(line.toString());
   }
 }
+
+rl.on('line', readLine);
