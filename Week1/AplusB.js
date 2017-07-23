@@ -9,7 +9,7 @@ var rl = readline.createInterface({
 rl.on("line", readLine)
 
 function readLine(line) {
-  console.log(line.toString())
+  console.log(parseInt(line.toString()))
   if (line !== "\n") {
     console.log(line.toString())
   }
