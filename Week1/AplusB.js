@@ -1,15 +1,26 @@
-const readline = require('readline');
+process.stdin.resume()
+process.stdin.setEncoding("ascii")
 
-process.stdin.setEncoding('utf8');
-const rl = readline.createInterface({
-  input: process.stdin,
-  terminal: false,
-});
+let input_stdin = ""
+let input_stdin_array = ""
+let input_currentline = 0
 
-function readLine(line) {
-  if (line !== '\n') {
-    console.log(line.toString());
-  }
+process.stdin.on("data", data => {
+  input_stdin += data
+})
+
+process.stdin.on("end", () => {
+  input_stdin_array = input_stdin.split("\n")
+  main()
+})
+
+function readLine() {
+  return input_stdin_array[input_currentline++]
 }
 
-rl.on('line', readLine);
+// ///////////// ignore above this line ////////////////////
+
+function main() {
+  const n = parseInt(readLine())
+  arr = readLine().split(" ")
+}
