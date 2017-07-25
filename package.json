@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "memwatch-next": "^0.3.0"
+    "memwatch-next": "^0.3.0",
+    "node-inspector": "^1.1.1"
   }
 }
