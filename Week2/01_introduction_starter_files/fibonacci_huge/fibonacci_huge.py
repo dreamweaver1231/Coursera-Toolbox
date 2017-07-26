@@ -7,9 +7,9 @@ def get_sequence():
 
     while True:
         previous, current = current, previous + current
-
         arr.append(current % m)
         width = len(arr)
+
         if(arr[width - 2] == 0 and arr[width - 1] == 1):
             return arr[: -2]
 
