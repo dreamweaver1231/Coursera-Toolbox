@@ -1,15 +1,13 @@
 # Uses python3
-import sys
+def lcm(a, b):
 
-def lcm_naive(a, b):
-    for l in range(1, a*b + 1):
-        if l % a == 0 and l % b == 0:
-            return l
+    if b == 0:
+        return a
 
-    return a*b
+    a_prime = a % b
+    return lcm(b, a_prime)
 
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    a, b = map(int, input.split())
-    print(lcm_naive(a, b))
-
+if __name__ == "__main__":
+    n = input()
+    a, b = map(int, n.split())
+    print(int((a*b)//(lcm(a, b))))
