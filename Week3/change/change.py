@@ -1,10 +1,10 @@
 # Uses python3
-import sys
 
+# %% get change method
 def get_change(m):
-    #write your code here
-    return m
+  return m
 
+# %% main method
 if __name__ == '__main__':
-    m = int(sys.stdin.read())
-    print(get_change(m))
+  m = int(10)
+  print(get_change(m))
