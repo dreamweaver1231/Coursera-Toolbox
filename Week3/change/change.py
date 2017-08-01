@@ -1,10 +1,14 @@
 # Uses python3
+def get_change(amount):
+    coins = [10, 5, 1]
+    count = 0
 
-# %% get change method
-def get_change(m):
-  return m
+    for coin in coins:
+        count += amount // coin
+        amount %= coin
+    return count
 
-# %% main method
-if __name__ == '__main__':
-  m = int(10)
-  print(get_change(m))
+
+if __name__ == "__main__":
+    n = int(input())
+    print(get_change(n))
